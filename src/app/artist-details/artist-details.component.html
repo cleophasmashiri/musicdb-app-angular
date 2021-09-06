@@ -1,1 +1,41 @@
-<p>artist-details works!</p>
+
+ <div class="container">
+ <div class="card-deck row" *ngIf="artist">
+    <div class="col-xs-12 col-sm-8 col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{ artist?.name }}</h4>
+                <p class="card-text">{{ artist?.nb_fan }} Fans</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+        <h4>Top Tracks</h4>
+        <ul class="list-group">
+            <li *ngFor="let track of tracks" class="list-group-item"><span class="left">{{ track.title }}</span><span class="right">{{ this.toHoursMinutesSeconds(track.duration) }}</span> </li>
+          </ul>
+    </div>
+</div>
+<div class="row">
+    <h4>Albums</h4>
+</div>
+<div class="row">
+    <div *ngFor="let album of albums" class="col-xs-12 col-sm-3 col-md-3">
+        <div class="card">
+            <div class="view overlay">
+                <img class="card-img-top" src="{{ album.cover }}" alt="Card image cap">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{ album?.title }}</h4>
+                <p class="card-text">{{ album?.release_date | date: 'yyyy'}} </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="loading">
+    Loading...
+</div>
+</div>
