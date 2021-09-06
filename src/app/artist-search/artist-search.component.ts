@@ -14,7 +14,7 @@ export class ArtistSearchComponent implements OnInit {
   error: any;
   loading = false;
 
-  constructor(private service: SearchService,  private router: Router) { }
+  constructor(private service: SearchService) { }
 
   ngOnInit(): void {
     this.search('eminem');
@@ -26,10 +26,6 @@ export class ArtistSearchComponent implements OnInit {
     .then(results => this.artists = results)
     .catch(err => this.error = err)
     .finally(() => this.loading = false);
-  }
-
-  showDetails(id: string): void {
-    this.router.navigate(['/artist/' + id]);
   }
 
 }

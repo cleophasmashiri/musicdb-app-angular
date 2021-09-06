@@ -8,26 +8,10 @@
     </div>
     <div class="card-deck row">
         <div *ngFor="let item of artists" class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card cursor" (click)="showDetails(item.id)">
-                <div class="view overlay">
-                    <img class="card-img-top" src="{{ item.picture }}" alt="Card image cap">
-                    <a href="#!">
-                        <div class="mask rgba-white-slight"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">{{ item.name }}</h4>
-                    <p class="card-text">{{ item.nb_fan }} Fans</p>
-                </div>
-            </div>
+            <app-artist-tile [artist]="item"></app-artist-tile>
         </div>
     </div>
     <div class="row" *ngIf="loading">
         Loading...
     </div>
 </div>
-<!-- <p>artist-search works!</p>
-
-<ul>
-    <li *ngFor="let item of artists">id:{{ item.id }} {{ item.name }}</li>
-</ul> -->

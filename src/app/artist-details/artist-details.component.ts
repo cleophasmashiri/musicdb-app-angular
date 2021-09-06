@@ -20,7 +20,6 @@ export class ArtistDetailsComponent implements OnInit {
   albums: Album[] = [];
 
   constructor(private service: SearchService, private route: ActivatedRoute) {
-
   }
 
   ngOnInit(): void {

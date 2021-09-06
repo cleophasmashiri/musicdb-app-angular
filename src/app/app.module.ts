@@ -8,13 +8,15 @@ import { ArtistSearchComponent } from './artist-search/artist-search.component';
 import {  HttpClientModule } from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './common/search/search.component';
+import { ArtistTileComponent } from './artist-tile/artist-tile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistDetailsComponent,
     ArtistSearchComponent,
-    SearchComponent
+    SearchComponent,
+    ArtistTileComponent
   ],
   imports: [
     BrowserModule,

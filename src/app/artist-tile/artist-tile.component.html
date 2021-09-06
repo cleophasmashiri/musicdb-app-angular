@@ -1,0 +1,12 @@
+<div class="card cursor" (click)="showDetails(artist?.id)">
+    <div class="view overlay">
+        <img class="card-img-top" src="{{ artist?.picture }}" alt="Card image cap">
+        <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">{{ artist?.name }}</h4>
+        <p class="card-text">{{ artist?.nb_fan }} Fans</p>
+    </div>
+</div>
