@@ -7,6 +7,7 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
 import { ArtistSearchComponent } from './artist-search/artist-search.component';
 import { ArtistTileComponent } from './artist-tile/artist-tile.component';
 import { AlbumTileComponent } from './album-tile/album-tile.component';
+import {  HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AlbumTileComponent } from './album-tile/album-tile.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
