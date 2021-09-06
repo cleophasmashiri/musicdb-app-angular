@@ -32,7 +32,7 @@ export class SearchService {
       this.http.get(`${this.API_URL}artist/${artistId}/albums`)
         .toPromise()
         .then((res: any) => {
-          let results = res?.data?.map((item: any) => new Album(item.id, item.title, item.release_date, item.cover, item.cover_small, item.cover_medium, item.cover_big,));
+          let results = res?.data?.map((item: any) => new Album(item.id, item.title, item.release_date, item.cover, item.cover_small, item.cover_medium, item.cover_big));
           resolve(results);
         })
         .catch(err => reject(err));

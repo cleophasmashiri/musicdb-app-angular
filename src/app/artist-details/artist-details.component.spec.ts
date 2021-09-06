@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { MockService } from '../services/mock.service';
+import { SearchService } from '../services/search.service';
 
 import { ArtistDetailsComponent } from './artist-details.component';
 
@@ -8,6 +11,8 @@ describe('ArtistDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterModule.forRoot([])],
+      providers: [{provide: SearchService, useClass: MockService}],
       declarations: [ ArtistDetailsComponent ]
     })
     .compileComponents();

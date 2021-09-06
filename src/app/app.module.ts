@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
 import { ArtistSearchComponent } from './artist-search/artist-search.component';
-import { ArtistTileComponent } from './artist-tile/artist-tile.component';
-import { AlbumTileComponent } from './album-tile/album-tile.component';
 import {  HttpClientModule } from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './common/search/search.component';
@@ -16,8 +14,6 @@ import { SearchComponent } from './common/search/search.component';
     AppComponent,
     ArtistDetailsComponent,
     ArtistSearchComponent,
-    ArtistTileComponent,
-    AlbumTileComponent,
     SearchComponent
   ],
   imports: [
