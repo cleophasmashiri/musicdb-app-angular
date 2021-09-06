@@ -40,6 +40,10 @@ export class ArtistDetailsComponent implements OnInit {
 
   }
 
+  searchHandler(term: string): void {
+    console.log(term)
+  }
+
   search(): void {
     this.loading = true;
     this.service.searchArtistById(this.artistId)

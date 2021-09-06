@@ -9,6 +9,7 @@ import { ArtistTileComponent } from './artist-tile/artist-tile.component';
 import { AlbumTileComponent } from './album-tile/album-tile.component';
 import {  HttpClientModule } from "@angular/common/http";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchComponent } from './common/search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ArtistDetailsComponent,
     ArtistSearchComponent,
     ArtistTileComponent,
-    AlbumTileComponent
+    AlbumTileComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

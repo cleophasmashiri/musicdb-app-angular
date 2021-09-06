@@ -1,5 +1,8 @@
 
  <div class="container">
+    <div class="row">
+        <app-search (searchEvent)="searchHandler($event)" ></app-search>
+    </div>
  <div class="card-deck row" *ngIf="artist">
     <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="card">
